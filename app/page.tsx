@@ -47,7 +47,7 @@ const Home = async ({ searchParams: { category, endcursor } }: Props) => {
   const pagination = data?.projectSearch?.pageInfo;
 
   return (
-    <section className="flex-start flez-col paddings mb-16 ">
+    <section className="flex-start flez-col paddings mb-16">
       <Categories />
       
       <section className="projects-grid">
