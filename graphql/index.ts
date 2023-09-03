@@ -140,3 +140,33 @@ export const getProjectsOfUserQuery = `
     }
   }
 `;
+
+export const getAllProjectsQuery = `
+  query getProjects($endcursor: String) {
+    projectSearch(first: 8, after: $endcursor) {
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+      edges {
+        node {
+          title
+          githubUrl
+          description
+          liveSiteUrl
+          id
+          image
+          category
+          createdBy {
+            id
+            email
+            name
+            avatarUrl
+          }
+        }
+      }
+    }
+  }
+`;
